@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming soon page | v.2</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images//logo.png" class="img-fluid" alt="logo"></a>
+            </div>
+            <div class="social_icon">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a> <span>facebook</span> </li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a> <span>twitter</span> </li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a> <span>youtube</span> </li>
+                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a> <span>pinterest</span>  </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="warper">
+        <div class="overlay">
+            <div class="container">
+                <div class="content">
+                    <div class="text">
+                        <p>Our Website Will Available Soon With New Features</p>
+                    </div>
+                    <div class="type-js_box">
+                        <p> <span class="type_js"></span></p>
+                    </div>
+                    <div class="subscribe">
+                        <form>
+                            <input type="email" placeholder="Enter Your Email Address">
+                            <input type="submit" value="Notify me">
+                        </form>
+                    </div>
+                </div>
+                <div class="copy_right">
+                    <p>Copyright 2013-2020  <span>CompanyName - All Rights Reserved</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+    <script src="js/typed.js"></script>
+    <script type="text/javascript">
+        // water rippls js start
+        $(document).ready(function(){
+            $(".warper").ripples({
+                resolution: 512,
+                dropRadius: 15,
+                interactive: false,
+                perturbance: 0.04,
+            });
+            // Automatic drops
+            setInterval(function() {
+                var $el = $('.warper');
+                var x = Math.random() * $el.outerWidth();
+                var y = Math.random() * $el.outerHeight();
+                var dropRadius = 20;
+                var strength = 0.04 + Math.random() * 0.04;
+
+                $el.ripples('drop', x, y, dropRadius, strength);
+            }, 500);
+        });
+        // water ripple js end
+        // type js  start
+        var typed = new Typed('.type_js', {
+            strings: ["We are coming soon...", "Stay with us!"],
+            loop: true,
+            typeSpeed: 60,
+            backSpeed: 50,
+            backDelay: 1000,
+        });
+        // type js  end
+    </script>
+</body>
+</html>
